@@ -6,9 +6,9 @@ const peopleList = document.querySelector('ul');
 const parseSalary = (str) => Number(str.replace(/\D/g, ''));
 // Number(
 //   el.textContent
-//     .split('')                // розбиваємо рядок на символи
-//     .filter(ch => !isNaN(ch) && ch !== ' ') // залишаємо тільки цифри
-//     .join('')                 // знову збираємо в рядок
+//     .split('')  // розбиваємо рядок на символи
+//     .filter(ch => !isNaN(ch) && ch !== ' ')  // залишаємо тільки цифри
+//     .join('')  // знову збираємо в рядок
 // );
 
 function sortList(list) {
@@ -24,7 +24,7 @@ function sortList(list) {
   items.forEach((item) => list.append(item));
 }
 
-function getInfoAboutPeople(list) {
+function getEmployees(list) {
   // Повертаємо від-map-ний масив в об'єкт
   return [...list.querySelectorAll('li')].map((item) => ({
     name: item.textContent.trim(),
@@ -35,4 +35,6 @@ function getInfoAboutPeople(list) {
 }
 
 sortList(peopleList);
-getInfoAboutPeople(peopleList);
+getEmployees(peopleList);
+
+export { sortList, getEmployees };
