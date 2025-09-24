@@ -4,6 +4,12 @@ const peopleList = document.querySelector('ul');
 
 // Створюємо допоміжну фунцію для форматування чисел
 const parseSalary = (str) => Number(str.replace(/\D/g, ''));
+// Number(
+//   el.textContent
+//     .split('')                // розбиваємо рядок на символи
+//     .filter(ch => !isNaN(ch) && ch !== ' ') // залишаємо тільки цифри
+//     .join('')                 // знову збираємо в рядок
+// );
 
 function sortList(list) {
   // Перетворюємо колекцію на масив
