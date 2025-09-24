@@ -22,6 +22,8 @@ function sortList(list) {
 
   // Додаємо відсортовані елементи в список
   items.forEach((item) => list.append(item));
+
+  return list;
 }
 
 function getEmployees(list) {
