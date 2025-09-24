@@ -3,7 +3,7 @@
 const peopleList = document.querySelector('ul');
 
 // Створюємо допоміжну фунцію для форматування чисел
-const parseSalary = (str) => Number(str.replace(/\D/g, ''));
+const parseSalary = (str) => Number(str.replace(/[$,]/g, ''));
 // Number(
 //   el.textContent
 //     .split('')  // розбиваємо рядок на символи
@@ -34,7 +34,8 @@ function getEmployees(list) {
   }));
 }
 
-sortList(peopleList);
-getEmployees(peopleList);
+const employees = getEmployees(peopleList);
 
-export { sortList, getEmployees };
+const sortedPeopleList = sortList(peopleList);
+
+export { sortList, getEmployees, employees, sortedPeopleList };
